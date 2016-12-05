@@ -1,0 +1,1 @@
+json.array! @prossefors, partial: 'prossefors/prossefor', as: :prossefor

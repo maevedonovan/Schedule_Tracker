@@ -1,0 +1,2 @@
+class Prossefor < ApplicationRecord
+end

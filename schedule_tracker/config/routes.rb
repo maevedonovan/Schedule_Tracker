@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :prossefors
   resources :courses
   resources :registrations
   resources :students
