@@ -10,7 +10,9 @@ class Student < ApplicationRecord
 
   belongs_to :classes, through: :Registration
 
+
   scope :by_alpha, -> { order(:l_name, :f_name) }
   scope :by_year, -> { order(:grad_yr)}
+
 
 end
