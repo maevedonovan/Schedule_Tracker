@@ -5,7 +5,7 @@ class Course < ApplicationRecord
   validates :max_enroll, numericality: true
 
   def current_enrollment
-    count
+    @class.students.count
   end
 
   has_many :students, through: Registration
