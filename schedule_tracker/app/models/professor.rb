@@ -3,4 +3,5 @@ class Professor < ApplicationRecord
 
   validates :f_name, :l_name, :desc, presence: true
 
+  scope :by_name, -> { order(:l_name, :f_name) }
 end
