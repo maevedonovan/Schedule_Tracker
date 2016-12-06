@@ -11,4 +11,37 @@
   <body>
     <%= yield %>
   </body>
+
+  <body>
+
+  <header>
+    <h1>Schedule Tracker</h1>
+  </header>
+
+  <div class="main">
+    <%= yield %>
+  </div>
+
+  <div id="primary">
+    <% if flash[:message] %>
+      <p class="flash-message"><%= flash[:message] %></p>
+    <% end %>
+  </div>
+
+  <%= render "layouts/sidebar" %>
+
+
+</body>
+
+<footer>
+<p>
+  Welcome to your schedule tracker app!
+
+  <% if session[:net_id] %>
+    <%= link_to 'Logout', logout_path %>
+  <% else %>
+    <%= link_to 'Login', login_path %>
+  <% end %>
+</p>
+</footer>
 </html>
