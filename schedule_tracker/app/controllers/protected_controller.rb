@@ -3,7 +3,7 @@ class ProtectedController < ApplicationController
   before_action :require_login
 
   def require_login
-    unless session[:net_id]
+    unless session[:username]
       flash[:message] = "Access Denied."
       redirect_to login_path
     end

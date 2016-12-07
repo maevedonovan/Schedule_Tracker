@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   get 'login' => 'login#index', as: :login
 
   get 'login' => 'login#authenticate', as: :authenticate
